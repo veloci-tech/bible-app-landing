@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI Bible Buddy</title>
-
+    <script src="https://lemonadejs.net/v3/lemonade.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="scss/styles.scss">
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js" defer></script>
     <style>
       .icon-margin {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
       }
 
       .top-of-image {
@@ -29,6 +30,45 @@
         border-radius: 20px;
         padding: 35px;
         margin-bottom: 30px;
+      }
+
+      .articles .col-lg-4 {
+        padding: 5px;
+      }
+
+      .articles .container {
+        padding: 15px;
+        height: 160px;
+        border-radius: 10px;
+        background-size: cover;
+      }
+
+      .articles .container p {
+        background-color: rgba(255, 255, 255, 0.57);
+        border-radius: 8px;
+        padding: 3px 15px 15px;
+        text-overflow: ellipsis;
+        height: 87px;
+        overflow: hidden;
+      }
+
+      #articles h2 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 40px;
+      }
+
+      #articles .col-lg-4:nth-child(even) .container {
+        background-color: #eaf0ee;
+      }
+
+      #articles .col-lg-4:nth-child(odd) .container {
+        background-color: rgb(74, 168, 192, 0.4);
+      }
+      .lottie-container {
+        width: 300px;
+        margin-left: calc(50% - 150px);
       }
     </style>
   </head>
@@ -62,7 +102,13 @@
                 </p>
               </div>
         </div>
+<!-- End of big -->
+      <!-- Start of List of articles -->
+      <div class="container marketing" id="articles">
 
+
+      </div>
+<!-- First section Description -->
       <h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
              class="bi bi-bootstrap-fill d-inline-block me-2 icon-margin" viewBox="0 0 16 16">
@@ -88,7 +134,21 @@
         The assistant can provide a variety of resources to aid in research, including translations of biblical texts, commentaries from scholars, historical and archaeological information, and theological perspectives. It can also help users navigate and search through complex biblical texts, offering summaries, interpretations, and cross-references.
       </p>
       <hr class="mt-5 mb-4">
-
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+             class="bi bi-bootstrap-fill d-inline-block me-2 icon-margin" viewBox="0 0 16 16">
+          <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+        </svg>
+        Get the APP</h2>
+      <p>
+        <a href="https://apps.apple.com/us/app/ai-bible-buddy/id6446416832">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               class="bi bi-apple d-inline-block me-2 icon-margin"  viewBox="0 0 16 16">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+          </svg>  App Store
+        </a>
+      </p>
       <p class="text-muted">© Copyright 2023 veloci-tech</p>
     </div>
   </body>
