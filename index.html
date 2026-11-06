@@ -26,8 +26,11 @@
     <link rel="stylesheet" href="scss/styles.scss">
     <script type="module" src="js/main.js" defer></script>
     <style>
-      .button-links .btn-primary {
-
+      .button-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 100%;
       }
       .icon-margin {
         margin-bottom: 5px;
@@ -125,7 +128,7 @@
       <main>
         <div class="bg-image">
               <h1>AI Bible Buddy app downloads and support</h1>
-          <p style="width: 320px" class="button-links">
+          <p class="button-links">
             <a href="https://apps.apple.com/us/app/ai-bible-buddy/id6446416832">
               <button type="button" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -136,7 +139,7 @@
               </button>
             </a>
 
-            <a href="https://play.google.com/store/apps/details?id=com.bible.study.app&pli=1" style="float: right">
+            <a href="https://play.google.com/store/apps/details?id=com.bible.study.app&pli=1">
               <button type="button" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      class="bi bi-google-play me-2 icon-margin" viewBox="0 0 16 16">

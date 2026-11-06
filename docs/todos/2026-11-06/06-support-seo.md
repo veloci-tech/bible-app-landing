@@ -51,4 +51,5 @@ All public HTML pages are indexable with unique titles/descriptions and correct 
 - Privacy-policy content from its existing H1 through its legal body matches `origin/main` exactly, including the May 10, 2024 date. CNAME and both PDFs are byte-identical to `origin/main`.
 - `node scripts/verify-static-seo.mjs`: PASS (metadata, headings, local links/assets, sitemap/robots, legal text, preserved script tags, store URLs, contact email, CNAME, and PDFs).
 - `git diff --check`: PASS.
+- Parent browser QA found the Google Play button clipped at 375px despite no document-level horizontal overflow. The homepage download row now wraps as a flex row, uses available width, and has no floated store link; parent will recheck mobile.
 - No deployment or browser smoke test performed; the coordinator owns release and live verification.
